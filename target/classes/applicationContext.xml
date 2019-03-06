@@ -6,7 +6,7 @@
 	<bean name="customerRepository" class="com.demo_spring.repository.HibernateCustomerRepositoryImpl"></bean>
 	
 	<bean name="customerService" class="com.demo_spring.service.CustomerServiceImpl">
-		<property name="customerRepo" ref="customerRepository"></property>
+		<constructor-arg index="0" ref="customerRepository"/>
 	</bean>
 </beans>
  
