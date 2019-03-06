@@ -29,7 +29,9 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	//setter injection
-//	public void setCustomerRepo(CustomerRepository customerRepo) {
-//		this.customerRepo = customerRepo;
-//	}
+	@Autowired
+	public void setCustomerRepo(CustomerRepository customerRepo) {
+		System.out.println("We are now using Setter injections");
+		this.customerRepo = customerRepo;
+	}
 }
