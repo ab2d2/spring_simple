@@ -2,12 +2,22 @@ package com.demo_spring.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.demo_spring.model.Customer;
 import com.demo_spring.repository.CustomerRepository;
 
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 	
+	@Autowired
 	private CustomerRepository customerRepo;
+	
+	public CustomerServiceImpl() {
+		
+	}
+	
 	
 	public CustomerServiceImpl(CustomerRepository customerRepository) {
 		this.customerRepo = customerRepository;
@@ -19,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	//setter injection
-	public void setCustomerRepo(CustomerRepository customerRepo) {
-		this.customerRepo = customerRepo;
-	}
+//	public void setCustomerRepo(CustomerRepository customerRepo) {
+//		this.customerRepo = customerRepo;
+//	}
 }
