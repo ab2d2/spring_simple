@@ -18,8 +18,9 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 	
-	
+	@Autowired
 	public CustomerServiceImpl(CustomerRepository customerRepository) {
+		System.out.println("We are now using Constructor injections");
 		this.customerRepo = customerRepository;
 	}
 	
